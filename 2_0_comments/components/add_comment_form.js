@@ -28,18 +28,6 @@ export default class AddCommentForm extends Component {
   }
   handleSubmit(e){
     e.preventDefault()
-    // 1
-    //const authorNode = this.refs.author
-    //const textNode = this.refs.text
-    //const author = authorNode.value.trim()
-    //const text = textNode.value.trim()
-    //if(author && text) {
-    //  this.props.addComment({author: author, text: text})
-    //  authorNode.value = ''
-    //  textNode.value = ''
-    //}
-
-    //2
     if(this.state.id !== undefined){
       this.props.updateComment(this.state)
     }else{

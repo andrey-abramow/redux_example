@@ -20,6 +20,6 @@ export default class CommentItem extends Component {
   }
 }
 CommentItem.propTypes = {
-  deleteComment: PropTypes.func.required,
+  deleteComment: PropTypes.func.isRequired,
   onEdit: PropTypes.func
 }

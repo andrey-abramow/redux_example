@@ -31,6 +31,7 @@ export default function comments(state = initialState, action) {
 
     case UPDATE_COMMENT_SUCCESS:
       comment = action.payload.comment
+      // do not do it!
       return comments(state, logEditedComment(comment)).map(_comment =>
         _comment.id == comment.id ? { ...comment } : _comment
       )

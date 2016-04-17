@@ -31,13 +31,9 @@ export default function comments(state = initialState, action) {
 
     case UPDATE_COMMENT_SUCCESS:
       comment = action.payload.comment
-      return comments(state, logEditedComment(comment)).map(_comment =>
+      return state.map(_comment =>
         _comment.id == comment.id ? { ...comment } : _comment
       )
-
-    case LOG_EDITED_COMMENT:
-      //console.log('Comment: ' + action.comment.author + action.comment.text + ' - has been edited')
-      return state
 
     default:
       return state
