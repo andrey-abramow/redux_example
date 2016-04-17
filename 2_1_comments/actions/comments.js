@@ -1,5 +1,4 @@
 import * as types from '../constants/action_types/comments'
-import fetch from 'isomorphic-fetch'
 import { CALL_API } from 'redux-api-middleware'
 const DOMAIN = 'http://localhost:8080'
 const PATH = '/api/comments'

@@ -3,7 +3,7 @@ const PATH = '/api/comments'
 const formatCommentRes = comment =>
   Object.assign({}, { id: comment._id, author: comment.author, text: comment.text })
 
-module.exports = app => {
+module.exports = function(app) {
 
   app.get(PATH, (req, res) =>
     Comment.find({}, (err, docs) =>
