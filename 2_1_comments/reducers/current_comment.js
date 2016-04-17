@@ -7,7 +7,7 @@ export default function currentComment(state = initialState, action) {
   switch (action.type) {
 
     case SET_CURRENT_COMMENT:
-      return Object.assign({}, action.comment)
+      return { ...action.comment }
 
     default:
       return state

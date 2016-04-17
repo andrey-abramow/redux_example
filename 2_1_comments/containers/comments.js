@@ -34,6 +34,7 @@ CommentsContainer.propTypes = {
 }
 
 function mapStateToProps(state) {
+  console.log('mapStateToProps')
   // invoked every time when state changes
   // use reselect
   return {

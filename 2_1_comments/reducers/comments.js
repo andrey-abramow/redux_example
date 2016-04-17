@@ -32,7 +32,7 @@ export default function comments(state = initialState, action) {
     case UPDATE_COMMENT_SUCCESS:
       comment = action.payload.comment
       return comments(state, logEditedComment(comment)).map(_comment =>
-        _comment.id == comment.id ? Object.assign({}, comment) : _comment
+        _comment.id == comment.id ? { ...comment } : _comment
       )
 
     case LOG_EDITED_COMMENT:

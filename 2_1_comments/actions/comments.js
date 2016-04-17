@@ -1,6 +1,8 @@
 import * as types from '../constants/action_types/comments'
 import fetch from 'isomorphic-fetch'
 import { CALL_API } from 'redux-api-middleware'
+const DOMAIN = 'http://localhost:8080'
+const PATH = '/api/comments'
 
 export function logEditedComment(comment){
   return { type: types.LOG_EDITED_COMMENT, comment }
@@ -22,7 +24,7 @@ function receiveComments(comments){
 export function fetchComments() {
   return {
     [CALL_API]: {
-      endpoint: 'http://localhost:8080/api/comments',
+      endpoint: DOMAIN + PATH,
       method: 'GET',
       types: [
         types.GET_COMMENTS_REQUEST,
@@ -42,7 +44,7 @@ export function fetchComments() {
 export function deleteComment(commentId) {
   return {
     [CALL_API]: {
-      endpoint: 'http://localhost:8080/api/comments/' + commentId,
+      endpoint: DOMAIN + PATH + '/' + commentId,
       method: 'DELETE',
       types: [
         types.DELETE_COMMENT_REQUEST,
@@ -59,7 +61,7 @@ export function deleteComment(commentId) {
 export function addComment(comment) {
   return {
     [CALL_API]: {
-      endpoint: 'http://localhost:8080/api/comments',
+      endpoint: DOMAIN + PATH,
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify(comment),
@@ -80,7 +82,7 @@ export function addComment(comment) {
 export function updateComment(comment) {
   return {
     [CALL_API]: {
-      endpoint: 'http://localhost:8080/api/comments/' + comment.id,
+      endpoint: DOMAIN + PATH + '/' + comment.id,
       method: 'PUT',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify(comment),
