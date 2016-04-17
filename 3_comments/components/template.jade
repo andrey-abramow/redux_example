@@ -1,0 +1,14 @@
+.b-container
+  .b-container__comments
+    .b-comments
+      .b-comments__header
+        h2 Comments list
+      .b-comments__body
+        .b-body
+          fieldset
+            each item in this.props.comments
+              .b-body__item
+              h3.b-body__item-name(onClick=this.handleClick(item))= item.name
+      .b-comments__form
+        h2
+        .b-form

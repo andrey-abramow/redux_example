@@ -1,0 +1,2 @@
+export const REMOVE_COMMENT = 'REMOVE_COMMENT'
+export const CLONE_COMMENT = 'CLONE_COMMENT'

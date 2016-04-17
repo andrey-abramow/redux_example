@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "app-root-path": "^1.0.0",
+    "body-parser": "^1.15.0",
+    "browserify-fs": "^1.0.0",
+    "css-loader": "^0.23.1",
+    "isomorphic-fetch": "^2.1.1",
+    "jade-react-loader": "^1.0.2",
+    "json-loader": "^0.5.4",
+    "mongoose": "^4.4.12",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "react-jade": "^2.5.0",
+    "react-redux": "^4.0.6",
+    "react-router": "^1.0.3",
+    "redux": "^3.0.6",
+    "redux-api-middleware": "^1.0.1",
+    "redux-thunk": "^1.0.3",
+    "style-loader": "^0.13.0"
+  },
+  "devDependencies": {
+    "express": "^4.13.3",
+    "babel-core": "^5.6.18",
+    "babel-loader": "^5.1.4",
+    "babel-plugin-react-transform": "^1.0.3",
+    "react-jade-loader": "^0.1.0",
+    "webpack": "^1.9.11",
+    "webpack-dev-middleware": "^1.2.0",
+    "react-transform-hmr": "^1.0.0",
+    "webpack-hot-middleware": "^2.10.0"
+  }
+}
