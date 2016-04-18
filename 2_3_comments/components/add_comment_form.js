@@ -75,13 +75,13 @@ export default class AddCommentForm extends Component {
 // for validation, only in dev mode
 AddCommentForm.propTypes = {
   addComment: PropTypes.func.isRequired,
-  comment: PropTypes.objectOf(
-    PropTypes.shape({
-      id: PropTypes.number,
+  comment: PropTypes.shape(
+    {
+      id: PropTypes.string,
       author: PropTypes.string,
       text: PropTypes.string
-    })
-  ).isRequired,
+    }
+  ),
   updateComment: PropTypes.func.isRequired,
   setCurrentComment: PropTypes.func.isRequired
 }

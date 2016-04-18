@@ -1,4 +1,4 @@
-import { SET_CURRENT_COMMENT } from '../constants/action_types'
+import { SET_CURRENT_COMMENT } from '../constants/action_types/current_comment'
 
 const initialState = { author: '', text: '' }
 

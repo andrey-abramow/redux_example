@@ -64,8 +64,8 @@ var rootReducer = Redux.combineReducers({ counter: counter, text: editor });
 var store = Redux.createStore(Redux.combineReducers({ root : rootReducer }), Redux.applyMiddleware(logMiddleWare));
 // register listeners
 var unsubscribe = store.subscribe(function(){console.log(store.getState());});
-// bound actions
 
+// bind actions
 var boundIncrement = function (params) {
   store.dispatch(increment(params));
 };

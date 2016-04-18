@@ -6,6 +6,19 @@ const PATH = '/api/comments'
 export function logEditedComment(comment){
   return { type: types.LOG_EDITED_COMMENT, comment }
 }
+// comments: GET
+function requestComments(){
+  return {
+    type: types.REQUEST_COMMENTS
+  }
+}
+
+function receiveComments(comments){
+  return {
+    type: types.RECEIVE_COMMENTS,
+    comments: [...comments]
+  }
+}
 
 export function fetchComments() {
   return {

@@ -1,9 +1,9 @@
 import { createStore, applyMiddleware } from 'redux'
 import rootReducer from '../reducers'
-import thunkMiddleware from 'redux-thunk'
+import { apiMiddleware } from 'redux-api-middleware'
 
 const createStoreWithMiddleware = applyMiddleware(
-  thunkMiddleware
+  apiMiddleware
 )(createStore)
 
 export default function configureStore(initialState) {
