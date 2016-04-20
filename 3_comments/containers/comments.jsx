@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import Comments from '../components/comments.jsx'
+import Comments from '../components/comments/component.jsx'
 import { connect } from 'react-redux'
 import { render } from 'react-dom'
 
@@ -11,7 +11,7 @@ class CommentsContainer extends Component {
   }
 
   componentDidMount() {
-    this.setState({comments: [{name: 'wer'}, {name: 'welcome'}]})
+    this.setState({ comments: [{name: 'wer'}, {name: 'welcome'}] })
   }
 
   render() {
@@ -35,6 +35,6 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(App)
+)(CommentsContainer)
 
 export default React.createElement(CommentsContainer)

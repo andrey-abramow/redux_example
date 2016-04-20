@@ -2,7 +2,8 @@ import React, { Component, PropTypes } from 'react'
 import { render } from 'react-dom'
 import CommentItem from './comment_item'
 import AddCommentForm from './add_comment_form'
-import styles from "!style!css!./style.css"
+import path from 'path'
+//import styles from "!style!css!./style.css"
 
 export default class Comments extends Component {
 

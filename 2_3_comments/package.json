@@ -32,8 +32,11 @@
     "babelify": "^7.2.0",
     "expect": "^1.16.0",
     "express": "^4.13.3",
+    "ignore-styles": "^1.2.0",
     "mocha": "^2.4.5",
     "nock": "^8.0.0",
+    "raw-loader": "^0.5.1",
+    "react-addons-test-utils": "^15.0.1",
     "react-jade-loader": "^0.1.0",
     "react-transform-hmr": "^1.0.4",
     "redux-mock-store": "^1.0.2",
@@ -43,7 +46,7 @@
     "webpack-hot-middleware": "^2.10.0"
   },
   "scripts": {
-    "test": "mocha --compilers js:babel-register --recursive",
+    "test": "NODE_ENV=test mocha --compilers css:./css_dont_compiler.js,js:babel-core/register --recursive",
     "test:watch": "npm test -- --watch"
   }
 }

@@ -1,10 +1,3 @@
-html,body,div,h1,h2,h3{
-  padding:0;
-  margin:0;
-}
-legend{
-  background:#fff;
-}
 .b-container{
   width:600px;
   padding:40px;

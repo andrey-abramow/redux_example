@@ -9,6 +9,7 @@ const setApi = require('./server/api')
 
 var app = new (require('express'))()
 
+console.log(config)
 // set middleware
 app.use(bodyParser.json({ type: 'application/json' }))
 var compiler = webpack(config)
